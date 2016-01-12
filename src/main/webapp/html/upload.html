@@ -1,0 +1,37 @@
+<div class="shaded-ribbon">
+	<div class="form-wrapper">
+		<form enctype="multipart/form-data" method="post" id="upload" class="pure-form pure-form-stacked" name="upload" action="/upload" accept="image/">
+			<fieldset>
+				<h2 class="form-heading">Upload a new photo</h2>
+				
+				<div class="pure-control-group">
+					<!--[if lte IE 9]>
+						<label for="title">Title:</label>
+					<![endif]-->
+					<input id="title" name="title" type="text" placeholder="Title">
+				</div>
+				
+				<div class="pure-control-group">
+					<!--[if lte IE 9]>
+						<label for="description">Description:</label>
+						<textarea id="description" name="description"></textarea>
+					<![endif]-->
+					<!--[if !IE]><!-->
+					<textarea id="description" name="description">Description</textarea>
+					<!--<![endif]-->
+				</div>
+				
+				<div class="pure-control-group">
+					<div id="dropbox">
+						<input name="file" id="fileselect" type="file" multiple="false" accept="image/" />
+						<span>Drop your photo</span>
+					</div>
+				</div>
+		
+				<button name="submit" type="submit" class="pure-button pure-button-primary">Upload</button>
+			</fieldset>
+		
+			<iframe name="upload-iframe" id="upload-iframe" src="" frameborder="0"></iframe>
+		</form>
+	</div>
+</div>

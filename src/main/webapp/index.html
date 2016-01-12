@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Photo Album</title>
+	<link rel="stylesheet" href="css/pure-min.css" th:href="@{/css/pure-min.css}">
+	<link rel="stylesheet" href="css/style.css" th:href="@{/css/style.css}">
+	<!--[if lte IE 9]>
+		<script src="js/polyfills/console.js" th:src="@{/js/polyfills/console.js}"></script>
+		<script src="js/polyfills/promise.min.js" th:src="@{/js/polyfills/promise.min.js}"></script>
+		<script src="js/polyfills/selectivizr.min.js" th:src="@{/js/polyfills/selectivizr.min.js}"></script>
+		<script src="js/polyfills/inexorabletash-polyfill.js" th:src="@{/js/polyfills/inexorabletash-polyfill.js}"></script>
+	<![endif]-->
+	<!--[if IE 9]>
+		<script src="js/polyfills/ie9.js" th:src="@{/js/polyfills/ie9.js}"></script>
+	<![endif]-->
+	<!--[if lte IE 8]>
+		<meta http-equiv="X-UA-Compatible" content="IE=8" />
+		<link rel="stylesheet" href="css/hacks.css" th:href="@{/css/hacks.css}">
+		<script src="js/polyfills/ie9.js" th:src="@{/js/polyfills/ie9.js}">IE7_PNG_SUFFIX = ".png";</script>
+		<script src="js/lib/jquery.min.js" th:src="@{/js/lib/jquery.min.js}"></script>
+	<![endif]-->
+	<script src="js/polyfills/moxie.min.js" th:src="@{/js/polyfills/moxie.min.js}"></script>
+	<script src="js/lib/director.min.js" th:src="@{/js/lib/director.min.js}"></script>
+	<script src="js/lib/transparency.min.js" th:src="@{/js/lib/transparency.min.js}"></script>
+	<script src="js/lib/moment.min.js" th:src="@{/js/lib/moment.min.js}"></script>
+	<script src="js/bundle.js" th:src="@{/js/bundle.js}"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<nav id="main-nav">
+				<ul id="authorization-menu">
+					<!-- populated with js -->
+				</ul>
+				<ul id="site-menu">
+					<li><a href="#/photos" th:href="@{#/photos}">Photos</a></li>
+					<li><a href="#/search" th:href="@{#/search}">Search</a></li>
+					<li><a href="#/about" th:href="@{#/about}">About Us</a></li>
+					<li><a href="#/contact" th:href="@{#/contact}">Contact</a></li>
+				</ul>
+			</nav>
+			<nav id="album-nav">
+				<ul id="album-menu">
+					<!-- populated with js -->
+				</ul>
+			</nav>
+		</header>
+		<div id="slider">
+			<img src="img/slider/1.jpg" th:src="@{/img/slider/1.jpg}" alt="">	
+			<img src="img/slider/2.jpg" th:src="@{/img/slider/2.jpg}" alt="">	
+			<img src="img/slider/3.jpg" th:src="@{/img/slider/3.jpg}" alt="">	
+			<img src="img/slider/4.jpg" th:src="@{/img/slider/4.jpg}" alt="">	
+			<img src="img/slider/5.jpg" th:src="@{/img/slider/5.jpg}" alt="">
+		</div>
+		<div id="content-wrapper">
+			<main id="content">
+				<div id="greeting" class="shaded-ribbon">
+					<noscript>
+						<span class="error">JavaScript is required by this site.</span>
+					</noscript>
+					<h1>Join the crappiest photo repository now!</h1>
+					<a href="#/signup" th:href="@{#/signup}" class="pure-button pure-button-primary">Sign Up</a>
+				</div>
+			</main>
+		</div>
+		<footer>
+			<p>com.github.millefoglie, 2015</p>
+		</footer>
+	</div>
+</body>
+</html>

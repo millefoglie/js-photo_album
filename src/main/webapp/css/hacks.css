@@ -1,0 +1,28 @@
+header, nav, main, footer, figure, figcaption {
+	margin: 0;
+}
+
+header {
+	background-image: url('/img/black80percent.png');
+}
+
+nav#album-nav {
+	background-image: url('/img/white50percent.png');
+}
+
+main#content {
+	position: relative;
+}
+
+div.shaded-ribbon {
+	background-image: url('/img/black30percent.png');
+}
+
+input#fileselect {
+	position: relative;
+	height: 100%;
+}
+
+div#photos-list {
+	background-image: url('/img/white95percent.png');
+}

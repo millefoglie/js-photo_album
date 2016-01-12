@@ -1,0 +1,21 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+	
+	<p th:if="${status}">
+		<span th:text="${status}">status-code</span>: <span
+			th:if="${error}" th:text="${error}">error ...</span>
+	</p>
+
+	<div
+		th:if="${ex} or ${exception} or (${message} and ${message.length() != 0})">
+		<span th:if="${ex}" th:text="${ex.message}">exception ...</span>
+		<span th:if="${exception}" th:text="${exception.message}">exception ...</span>
+		<span th:if="${message} and ${message.length() != 0}"
+			th:text="${message}">message ...</span>
+	</div>
+
+	<p th:unless="${ex} or ${exception} or (${message} and ${message.length() != 0})">
+		Cause unknown
+	</p>
+</html>

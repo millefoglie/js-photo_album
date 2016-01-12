@@ -1,0 +1,116 @@
+div#photo-page-wrapper {
+    // XXX: parent padding adds scrollbars
+    padding: 0;
+
+    background-color: rgba(0, 0, 0, .85);
+
+    @extend div#photos-list-wrapper;
+}
+
+
+div#photo-page {
+    position: relative;
+
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 30px;
+
+    text-align: justify;
+
+    @media (max-width: $width-medium), screen and (max-device-width: $width-medium) {
+    	min-width: 50%;
+        max-width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    figure {
+        position: relative;
+        margin: 0;		// XXX: conflicts with pure-css here
+
+        overflow: hidden;
+    }
+
+    figcaption {
+        position: absolute;
+
+        display: inline-block;
+        float: right;
+        overflow: hidden;
+
+        box-sizing: border-box;
+        width: 33%;
+        height: 100%;
+        padding: 1em;
+
+        text-overflow: ellipsis;
+
+        background-color: white;
+
+        @media (max-width: $width-medium), screen and (max-device-width: $width-medium) {
+            position: relative;
+
+            display: block;
+            float: none;
+
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    img.photo {
+        float: left;
+
+        max-width: 66%;
+
+        @media (max-width: $width-medium), screen and (max-device-width: $width-medium) {
+            display: block;
+            float: none;
+
+            min-width: 100%;
+        }
+    }
+
+    a#go-back {
+        margin-bottom: 2ex;
+    }
+
+    span.title {
+        font-size: .9em;
+        font-weight: 600;
+    }
+
+    span.author {
+        font-size: .9em;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    span.added-on {
+        font-size: .8em;
+        font-weight: 200;
+
+        color: rgb(192, 192, 192);
+    }
+
+    a.likes {
+        font-size: .9em;
+        font-weight: 600;
+
+        float: right;
+
+        margin-left: 2em;
+
+        text-decoration: none;
+
+        color: $pure-blue;
+    }
+
+    span.description {
+        font-size: .9em;
+
+        padding-top: 15px;
+    }
+}

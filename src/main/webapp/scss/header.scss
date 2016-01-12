@@ -1,0 +1,159 @@
+$header-height: 120px;
+$album-menu-height: 30px;
+
+header {
+	position: relative;
+
+	box-sizing: border-box;
+	width: 100%;
+	min-height: $header-height;
+
+	color: white;
+	background-color: rgba(0, 0, 0, .8);
+
+	a {
+		font-size: 1em;
+
+		display: inline-block;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		color: white;
+	}
+
+	nav {
+		width: 100%;
+
+		ul {
+			list-style: none;
+
+			li {
+				float: left;
+
+				&:not(:last-of-type) {
+					border-right: 1px solid white;
+				}
+			}
+		}
+	}
+
+	nav#main-nav {
+		font-weight: bold;
+		height: $header-height - $album-menu-height;
+		box-sizing: border-box;
+		padding-top: $header-height - 70px;
+
+		@media (max-width: $width-medium), handheld and (orientation: portrait) {
+			padding: 10px 0 30px;
+		}
+
+		a {
+			padding: 0 25px;
+
+			&:hover {
+				color: $grey-mid;
+			}
+		}
+
+		ul#authorization-menu {
+			padding-right: 25px;
+			float: right;
+
+			@media (max-width: $width-medium), handheld and (orientation: portrait) {
+				padding-bottom: 10px;
+			}
+		}
+
+		ul#authorization-menu, ul#site-menu {
+			@media (max-width: $width-medium), handheld and (orientation: portrait) {
+				float: none;
+				display: block;
+				overflow: hidden;
+				margin: 10px auto;
+				text-align: center;
+
+				li {
+					float: none;
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	nav#site-menu {
+		padding-left: 11px;
+	}
+
+	nav#album-nav {
+		width: 100%;
+		min-height: $album-menu-height;
+
+		background-color: rgba(255, 255, 255, .5);
+
+		& > ul {
+			display: inline-block;
+
+			vertical-align: middle;
+
+			& > li {
+				position: relative;
+
+				height: 30px;
+
+				& > a {
+					padding: 0 25px;
+				}
+
+				&:hover > a {
+					border-bottom: 3px solid $pure-blue;
+				}
+
+				&:before {
+					display: inline-block;
+
+					height: 100%;
+
+					content: '';
+					vertical-align: middle;
+				}
+			}
+
+			ul {
+				position: absolute;
+				top: 100%;
+				left: 0;
+
+				display: none;
+
+				background: $grey-light;
+
+				a {
+					font-size: 0.9em;
+					padding: 10px 0 10px 25px;
+
+					color: black;
+
+					&:hover {
+						color: $pure-blue;
+					}
+				}
+
+				li {
+					float: none;
+
+					width: 150px;
+				}
+			}
+
+			li:hover > ul {
+				z-index: 5;
+
+				display: block;
+			}
+		}
+
+		a {
+			font-size: 0.9em;
+		}
+	}
+}

@@ -1,0 +1,79 @@
+$grey-light: #e6e6e6;
+$grey-mid: #808080;
+$pure-blue: rgb(0, 120, 231);
+$width-narrow: 480px;
+$width-medium: 800px;
+$width-wide: 1100px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html, body {
+    font-size: 14px;
+
+    overflow: hidden;
+
+    min-width: 320px;
+    height: 100%;
+    @media (max-width: $width-narrow) {
+        font-size: 13px;
+    }
+    @media (max-width: $width-medium) {
+        font-size: 12px;
+    }
+    @media screen and (max-device-width: $width-medium) {
+        font-size: 12px;
+    }
+}
+
+
+body {
+    font-family: Helvetica Neue, Roboto, Helvetica, Arial, Sans Serif;
+
+    position: relative;
+}
+
+
+div#wrapper {
+    overflow: hidden;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+@import 'header';
+@import 'slider';
+@import 'main';
+@import 'upload';
+@import 'photoslist';
+@import 'photo';
+@import 'contact';
+@import 'footer';
+
+@import 'modals';
+
+
+.pure-form {
+    label {
+        color: white;
+    }
+}
+
+
+.pure-form-stacked {
+    label {
+        text-align: left;
+    }
+}
+
+
+div.form-wrapper {
+    display: inline-block;
+
+    max-width: 40%;
+}
